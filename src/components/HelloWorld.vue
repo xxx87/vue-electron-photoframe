@@ -10,6 +10,7 @@
           Welcome to Vuetify
         </h1>
         <v-switch v-model="$vuetify.theme.dark" hint="This toggles the global state of the Vuetify theme" inset label="Vuetify Theme Dark" persistent-hint></v-switch>
+        <v-btn @click="testTheme">Switch</v-btn>
         <p class="subheading font-weight-regular">
           For help and collaboration with other Vuetify developers,
           <br />please join our online
@@ -111,6 +112,11 @@ export default {
         href: "https://vuetifyjs.com/getting-started/frequently-asked-questions"
       }
     ]
-  })
+  }),
+  methods: {
+    testTheme() {
+      console.log(this.$vuetify.theme);
+    }
+  }
 };
 </script>
